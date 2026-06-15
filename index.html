@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Real Life Ready | Executive Function Coaching for Grades 4–8</title>
-  <meta name="description" content="Real Life Ready helps capable grades 4–8 kids build daily systems for school, screens, routines, and follow-through without parents carrying everything.">
+  <meta name="description" content="Executive function coaching for capable grades 4–8 kids who need fewer reminders, stronger routines, better organization, screen boundaries, and follow-through. Start with a free parent call.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#17463f">
-  <link rel="canonical" href="https://example.com/">
+  <link rel="canonical" href="https://reallifeready.netlify.app/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Real Life Ready | Executive Function Coaching for Grades 4–8">
-  <meta property="og:description" content="Your child is capable. But you are still carrying too much. Start with a free parent call for practical executive function coaching.">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://example.com/og-image.svg">
+  <meta property="og:description" content="For capable grades 4–8 kids who need fewer reminders, stronger routines, better organization, screen boundaries, and follow-through.">
+  <meta property="og:url" content="https://reallifeready.netlify.app/">
+  <meta property="og:image" content="https://reallifeready.netlify.app/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
@@ -151,13 +151,6 @@
     .highlight { background: var(--brand); color: white; border-radius: var(--radius); padding: clamp(1.5rem, 4vw, 2.5rem); display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; box-shadow: var(--shadow); }
     .highlight p { color: rgba(255,255,255,.78); margin: .8rem 0 0; max-width: 70ch; }
     .price { font-size: 2rem; font-weight: 900; letter-spacing: -.04em; color: #ffe2b9; }
-    .credit { max-width: 220px; margin: .35rem 0 1rem; color: rgba(255,255,255,.78); font-size: .95rem; }
-    .assessment-list { margin-top: 1rem; }
-    .anchor-alias { position: relative; top: -96px; display: block; visibility: hidden; }
-    .offer-card { border-left: 6px solid var(--brand-2); }
-    .review-card { min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; }
-    .review-placeholder { color: var(--muted); font-style: italic; }
-    .review-attribution { margin-top: 1.25rem; font-weight: 900; color: var(--brand); }
     .faq { display: grid; gap: .85rem; }
     details { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 1rem 1.1rem; }
     summary { cursor: pointer; font-weight: 850; }
@@ -192,44 +185,25 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Real Life Ready",
-      "description": "Executive function coaching for capable grades 4–8 kids who need fewer reminders, stronger systems, and more independence at home and school.",
-      "url": "https://example.com/",
-      "areaServed": "Available for local family coaching and select online parent consults"
+      "description": "Executive function coaching for capable grades 4–8 kids who need fewer reminders, stronger routines, better organization, screen boundaries, and follow-through.",
+      "url": "https://reallifeready.netlify.app/",
+      "email": "hello@example.com",
+      "areaServed": "Serving families locally and online"
     }
   </script>
   <script>
     window.siteConfig = {
       bookingLink: "https://calendly.com/your-business/free-parent-call",
-      businessEmail: "",
-      serviceArea: "Available for local family coaching and select online parent consults",
-      domainName: "https://example.com",
-      parentReviews: [
-        { name: "PARENT NAME 1", quote: "PASTE REAL REVIEW 1 HERE. Remove the child name, but keep the parent name." },
-        { name: "PARENT NAME 2", quote: "PASTE REAL REVIEW 2 HERE. Remove the child name, but keep the parent name." },
-        { name: "PARENT NAME 3", quote: "PASTE REAL REVIEW 3 HERE. Remove the child name, but keep the parent name." },
-        { name: "PARENT NAME 4", quote: "PASTE REAL REVIEW 4 HERE. Remove the child name, but keep the parent name." }
-      ]
+      businessEmail: "hello@example.com",
+      serviceArea: "Serving families locally and online",
+      domainName: "https://reallifeready.netlify.app/"
     };
 
     document.addEventListener("DOMContentLoaded", () => {
       const { bookingLink, businessEmail, serviceArea } = window.siteConfig;
       document.querySelectorAll("[data-booking-link]").forEach((link) => { link.href = bookingLink; });
-      document.querySelectorAll("[data-business-email]").forEach((link) => {
-        if (!businessEmail) {
-          link.closest("[data-email-wrapper]")?.remove();
-          return;
-        }
-        link.href = `mailto:${businessEmail}`;
-        link.textContent = businessEmail;
-      });
-      if (!businessEmail) document.querySelector("#contact-form")?.remove();
+      document.querySelectorAll("[data-business-email]").forEach((link) => { link.href = `mailto:${businessEmail}`; link.textContent = businessEmail; });
       document.querySelectorAll("[data-service-area]").forEach((node) => { node.textContent = serviceArea; });
-      document.querySelectorAll("[data-review-index]").forEach((card) => {
-        const review = window.siteConfig.parentReviews?.[Number(card.dataset.reviewIndex)];
-        if (!review) return;
-        card.querySelector("[data-review-quote]").textContent = review.quote;
-        card.querySelector("[data-review-name]").textContent = `— ${review.name}`;
-      });
       const form = document.querySelector("#contact-form");
       form?.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -249,11 +223,8 @@
       <nav>
         <ul>
           <li><a href="#fit">Who it helps</a></li>
-          <li><a href="#coaching">Coaching</a></li>
-          <li><a href="#offer">What you buy</a></li>
+          <li><a href="#process">How coaching works</a></li>
           <li><a href="#assessment">Assessment</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -266,40 +237,25 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Executive function coaching for grades 4–8</p>
-          <h1>Your child is capable. But you are still carrying too much.</h1>
-          <p class="lead">Real Life Ready helps upper-elementary and middle-school kids build the daily systems they need to start, organize, manage screens, and follow through — without parents having to remind, rescue, and repeat every day.</p>
-          <p class="note"><strong>Student coaching + parent support + practical school/home systems inside a 90-Day Responsibility Build.</strong></p>
-          <p class="note">For families tired of reminding, rescuing, and repeating.</p>
+          <h1>Help your capable child need fewer reminders.</h1>
+          <p class="lead">Real Life Ready helps upper-elementary and middle-school students build practical systems for starting, organizing, managing screens, and following through with less parent support.</p>
           <div class="cta-row">
             <a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Schedule a free parent call</a>
-            <a class="button secondary" href="#assessment">See the assessment</a>
+            <a class="button secondary" href="#process">See how coaching works</a>
           </div>
+          <p class="note"><strong>Student coaching + parent support + practical school/home systems.</strong></p>
           <p class="note"><strong>Service area:</strong> <span data-service-area>Serving families locally and online</span>.</p>
         </div>
         <aside class="hero-card" aria-label="Program overview">
-          <p class="eyebrow">First step: free parent call</p>
-          <h2>Coaching starts with a practical school-and-home assessment.</h2>
+          <p class="eyebrow">For families tired of reminding, rescuing, and repeating</p>
+          <h2>Not tutoring. Not therapy. Practical coaching for follow-through.</h2>
           <ul class="check-list">
-            <li><span>Start with a free parent call to understand fit.</span></li>
-            <li><span>If appropriate, continue with a $500 Executive Function &amp; Independence Assessment.</span></li>
-            <li><span>Receive a written Independence Plan plus a parent debrief call.</span></li>
-            <li><span>Move into a 90-Day Responsibility Build only when coaching is the right next step.</span></li>
+            <li><span>Your child can often do the work when an adult sits nearby, but struggles to start alone.</span></li>
+            <li><span>Homework, screens, routines, planners, and materials create daily friction.</span></li>
+            <li><span>You want more responsibility without turning every afternoon into a negotiation.</span></li>
+            <li><span>The first step is a free parent call to see whether the program is a fit.</span></li>
           </ul>
         </aside>
-      </div>
-    </section>
-
-    <section id="changes">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">What changes</p>
-          <h2>From parent-managed to child-owned.</h2>
-        </div>
-        <div class="cards">
-          <article class="card"><h3>Before Real Life Ready</h3><ul class="check-list"><li><span>You remind.</span></li><li><span>They argue.</span></li><li><span>Homework starts late.</span></li><li><span>Screens become a fight.</span></li><li><span>The backpack, planner, laptop, and assignments are your problem.</span></li><li><span>You wonder why a bright child still needs this much help.</span></li></ul></article>
-          <article class="card"><h3>After the system is working</h3><ul class="check-list"><li><span>Your child knows what to do first.</span></li><li><span>Routines are visible and repeatable.</span></li><li><span>Screens have clearer limits.</span></li><li><span>Schoolwork becomes the training ground for responsibility.</span></li><li><span>Parents carry less because the child has a process.</span></li></ul></article>
-          <article class="card"><h3>The goal</h3><p>Not perfection. More ownership while the stakes are still small — and less nightly friction for the whole family.</p></article>
-        </div>
       </div>
     </section>
 
@@ -307,57 +263,13 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Who it helps</p>
-          <h2>For capable kids who need practical systems and ownership.</h2>
-          <p>This is not tutoring, therapy, or a replacement for teachers or counselors. It is structured executive function coaching for daily follow-through at home and school.</p>
+          <h2>For capable kids whose daily systems are not keeping up.</h2>
+          <p>This is structured executive function coaching for daily follow-through at home and school. It is designed to complement teachers, counselors, therapists, doctors, and school supports — not replace them.</p>
         </div>
         <div class="cards">
-          <article class="card"><h3>Starting feels hard</h3><p>Your child understands the work but has trouble beginning without repeated reminders.</p></article>
-          <article class="card"><h3>Organization slips</h3><p>Assignments, backpacks, planners, and materials become a constant source of friction.</p></article>
-          <article class="card"><h3>Screens take over</h3><p>Transitions away from devices are difficult, especially when homework or routines need attention.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="urgency">
-      <div class="container">
-        <div class="highlight">
-          <div>
-            <p class="eyebrow">Why now</p>
-            <h2>The pattern usually does not fix itself by waiting.</h2>
-            <p>Many capable kids eventually mature. But maturity alone does not always build systems. If a child is repeatedly rescued, reminded, negotiated with, or managed through every hard moment, they may not get enough practice owning the process.</p>
-            <p>The goal is to help your child practice responsibility while the stakes are still small.</p>
-          </div>
-          <a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Talk through the pattern</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="coaching">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Coaching</p>
-          <h2>Fewer reminders. More responsibility. Less nightly friction.</h2>
-          <p>Real Life Ready provides structured executive function coaching with practical parent support, routines, organization systems, screen-transition plans, and a follow-through scorecard.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><h3>Student coaching</h3><p>Students practice concrete tools for planning, starting, organizing, prioritizing, and following through.</p></article>
-          <article class="card"><h3>Parent support</h3><p>Parents get language, routines, and boundaries that reduce rescuing and repeating at home.</p></article>
-          <article class="card"><h3>School/home systems</h3><p>The work connects backpacks, planners, digital assignments, screens, routines, and responsibility in real life.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="offer">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">What parents are buying</p>
-          <h2>The 90-Day Responsibility Build.</h2>
-          <p>Families are not buying a one-off review. They are buying a structured 90-day build that turns schoolwork, routines, screens, and follow-through into daily practice for independence.</p>
-        </div>
-        <div class="cards">
-          <article class="card offer-card"><h3>First: fit</h3><p>A free parent call confirms whether Real Life Ready is the right kind of support for your child and family.</p></article>
-          <article class="card offer-card"><h3>Then: assessment</h3><p>The $500 Executive Function &amp; Independence Assessment maps the school/home breakdown points and produces a written Independence Plan.</p></article>
-          <article class="card offer-card"><h3>Core offer: coaching</h3><p>If recommended, the family moves into a 90-Day Responsibility Build with student coaching, parent support, routines, organization systems, screen transitions, and follow-through tracking.</p></article>
+          <article class="card"><h3>Starting feels hard</h3><p>Your child understands the work but has trouble beginning without repeated reminders, sitting nearby, or repeated negotiation.</p></article>
+          <article class="card"><h3>Organization slips</h3><p>Assignments, backpacks, planners, digital platforms, and materials become a constant source of friction.</p></article>
+          <article class="card"><h3>Screens take over</h3><p>Transitions away from devices are difficult, especially when homework, chores, or evening routines need attention.</p></article>
         </div>
       </div>
     </section>
@@ -365,83 +277,30 @@
     <section id="process">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Process</p>
-          <h2>How Real Life Ready Coaching Works</h2>
+          <p class="eyebrow">How coaching works</p>
+          <h2>A clear path into executive function coaching.</h2>
+          <p>Parents should not have to guess whether coaching is the right next step. The process starts with a free call, then a practical assessment if there is a fit.</p>
         </div>
         <div class="steps">
-          <article class="card step"><h3>Free parent call</h3><p>We talk through what is happening at home and school and decide whether the program is a fit.</p></article>
-          <article class="card step"><h3>Executive Function &amp; Independence Assessment</h3><p>If it is a fit, the next step is a $500 assessment with parent input, student input, a school/home responsibility review, and a written plan.</p></article>
-          <article class="card step"><h3>The 90-Day Responsibility Build</h3><p>Most families who continue move into a structured build focused on routines, organization, screens, planning, and follow-through.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="responsibility-build">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Core program</p>
-          <h2>The 90-Day Responsibility Build</h2>
-          <p>The goal is not to talk about executive function. The goal is to build it into daily life.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><h3>Month 1: Find the bottleneck and stabilize the routine</h3><p>We identify the highest-friction moments: homework start, screens, backpack, planner, morning routine, evening routine, or emotional shutdown.</p></article>
-          <article class="card"><h3>Month 2: Build repeatable systems</h3><p>Your child practices visible routines, checklists, planning steps, and follow-through habits until they become easier to repeat.</p></article>
-          <article class="card"><h3>Month 3: Transfer ownership</h3><p>Parents begin stepping back. The child begins using the system with less adult prompting.</p></article>
-        </div>
-        <div class="panel assessment-list">
-          <h3>Parents receive</h3>
-          <ul class="check-list"><li><span>Clear weekly focus.</span></li><li><span>Practical home system.</span></li><li><span>Simple progress updates.</span></li><li><span>What to reinforce.</span></li><li><span>What not to over-help with.</span></li></ul>
+          <article class="card step"><h3>Free parent call</h3><p>We talk through what is happening at home and school, what you have already tried, and whether Real Life Ready is likely to help.</p></article>
+          <article class="card step"><h3>Executive Function &amp; Independence Assessment</h3><p>If it is a fit, the next step is a $500 assessment that reviews the school and home responsibility patterns and creates the coaching plan.</p></article>
+          <article class="card step"><h3>90-day coaching plan</h3><p>Most families who continue move into structured coaching focused on routines, organization, screens, planning, and follow-through.</p></article>
         </div>
       </div>
     </section>
 
     <section id="assessment">
-      <span id="review" class="anchor-alias" aria-hidden="true"></span>
       <div class="container">
         <div class="highlight">
           <div>
-            <p class="eyebrow">Assessment</p>
-            <h2>The $500 Executive Function &amp; Independence Assessment</h2>
-            <p>Before coaching starts, we identify the real bottleneck. Some kids do not need more motivation, another tutor, or another adult reminding them. They need a clearer system for what to do first, what done looks like, how to transition away from screens, and how to recover when they get stuck.</p>
+            <p class="eyebrow">First paid step after the free call</p>
+            <h2>Executive Function &amp; Independence Assessment</h2>
+            <p>The assessment identifies where your child is getting stuck and creates a practical plan before coaching begins. It includes parent input, student input, a school/home responsibility review, and a parent debrief. If your family continues into the 90-day coaching program, the assessment fee can be applied toward the program cost.</p>
           </div>
           <div>
             <div class="price">$500</div>
-            <p class="credit">Applied toward the 90-day coaching program if your family continues.</p>
             <a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Start with the free call</a>
           </div>
-        </div>
-        <div class="cards assessment-list">
-          <article class="card"><h3>What we identify</h3><p>What to do first, what done looks like, how to manage materials, how to transition away from screens, how to recover when stuck, and how to follow a routine without a parent carrying it.</p></article>
-          <article class="card"><h3>Includes</h3><p>Parent intake, student input, home routine review, school responsibility review, screen/friction pattern review, written coaching priorities, and a parent debrief with recommended next step.</p></article>
-          <article class="card"><h3>What happens next</h3><p>If your family continues into The 90-Day Responsibility Build, the assessment fee is applied toward the program.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="founder">
-      <div class="container">
-        <div class="panel">
-          <p class="eyebrow">Founder note</p>
-          <h2>Why I built Real Life Ready</h2>
-          <p>I have spent years working with children who are bright, capable, and supported — but still struggle to manage the daily responsibilities school and life require.</p>
-          <p>I kept seeing the same pattern. The child could often do the work when an adult sat beside them. But they struggled to start, organize, plan, transition, and follow through independently.</p>
-          <p>That gap creates stress for the whole family. Real Life Ready was built to help close that gap with practical systems, parent support, and coaching that works alongside school teams — not against them.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews" aria-labelledby="reviews-heading">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Parent reviews</p>
-          <h2 id="reviews-heading">Four parent reviews belong here.</h2>
-          <p>Paste the real parent reviews into <code>window.siteConfig.parentReviews</code>. Remove kids’ names from the quotes, but keep the parent names in the attribution.</p>
-        </div>
-        <div class="cards">
-          <article class="card review-card" data-review-index="0"><div><h3>Parent review 1</h3><p class="review-placeholder" data-review-quote>PASTE REAL REVIEW 1 HERE. Remove the child name, but keep the parent name.</p></div><p class="review-attribution" data-review-name>— PARENT NAME 1</p></article>
-          <article class="card review-card" data-review-index="1"><div><h3>Parent review 2</h3><p class="review-placeholder" data-review-quote>PASTE REAL REVIEW 2 HERE. Remove the child name, but keep the parent name.</p></div><p class="review-attribution" data-review-name>— PARENT NAME 2</p></article>
-          <article class="card review-card" data-review-index="2"><div><h3>Parent review 3</h3><p class="review-placeholder" data-review-quote>PASTE REAL REVIEW 3 HERE. Remove the child name, but keep the parent name.</p></div><p class="review-attribution" data-review-name>— PARENT NAME 3</p></article>
-          <article class="card review-card" data-review-index="3"><div><h3>Parent review 4</h3><p class="review-placeholder" data-review-quote>PASTE REAL REVIEW 4 HERE. Remove the child name, but keep the parent name.</p></div><p class="review-attribution" data-review-name>— PARENT NAME 4</p></article>
         </div>
       </div>
     </section>
@@ -453,13 +312,10 @@
           <h2 id="faq-heading">Clear boundaries, practical support.</h2>
         </div>
         <div class="faq">
-          <details><summary>Is this therapy?</summary><p>No. Real Life Ready provides executive function coaching and practical skill-building. It does not diagnose or treat mental health conditions.</p></details>
-          <details><summary>Is this tutoring?</summary><p>No. The focus is not reteaching academic content. The focus is starting, planning, organizing, managing screens, and following through.</p></details>
-          <details><summary>Do you work with teachers or counselors?</summary><p>The work is designed to complement teachers, counselors, therapists, doctors, and school supports — not replace them.</p></details>
-          <details><summary>Will this work if my child resists help?</summary><p>Often, yes — but the first goal is not to force buy-in. The first goal is to reduce friction, make expectations visible, and give the child a clearer path to success.</p></details>
-          <details><summary>What if we have already tried therapy, tutoring, a 504, or school support?</summary><p>Real Life Ready is designed to complement those supports. Many families have pieces of help in place but still need a practical implementation layer at home: routines, planning, organization, screens, and follow-through.</p></details>
-          <details><summary>Is this just for kids with ADHD?</summary><p>No. Some students have ADHD. Some do not. The program is for capable kids who need stronger systems for daily responsibility.</p></details>
-          <details><summary>What if my child is smart but immature?</summary><p>That is one of the most common fits. The goal is to help your child practice independence before the stakes get bigger.</p></details>
+          <details><summary>Is this executive function coaching?</summary><p>Yes. Real Life Ready provides executive function coaching for practical daily skills: starting, planning, organizing, managing screens, and following through.</p></details>
+          <details><summary>Is this therapy?</summary><p>No. Real Life Ready provides coaching and practical skill-building. It does not diagnose or treat mental health conditions.</p></details>
+          <details><summary>Is this tutoring?</summary><p>No. The focus is not reteaching academic content. Schoolwork may be used as the training ground, but the goal is independence, organization, responsibility, and follow-through.</p></details>
+          <details><summary>Do you work with teachers or counselors?</summary><p>Yes. The work is designed to support the systems families already have. Teachers, counselors, therapists, doctors, and school teams all play important roles. Real Life Ready focuses on the practical implementation layer at home and school.</p></details>
         </div>
       </div>
     </section>
@@ -469,7 +325,7 @@
         <div class="panel">
           <p class="eyebrow">Ready to talk?</p>
           <h2>Start with a free parent call.</h2>
-          <p>The fastest next step is the booking link. <span data-email-wrapper>If email is configured, you can also reach out at <a data-business-email href="mailto:"></a>.</span></p>
+          <p>Email <a data-business-email href="mailto:hello@example.com">hello@example.com</a> or use the form. The fastest next step is the booking link.</p>
           <div class="cta-row"><a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Book the free parent call</a></div>
         </div>
         <form id="contact-form" class="panel">
@@ -485,7 +341,7 @@
   <footer>
     <div class="container footer-row">
       <span>© <span id="year"></span> Real Life Ready. All rights reserved.</span>
-      <span data-email-wrapper><a data-business-email href="mailto:"></a></span>
+      <span><a data-business-email href="mailto:hello@example.com">hello@example.com</a></span>
     </div>
   </footer>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>

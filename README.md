@@ -9,19 +9,13 @@ Open `index.html` and update the `window.siteConfig` block near the top of the f
 ```js
 window.siteConfig = {
   bookingLink: "https://calendly.com/your-business/free-parent-call",
-  businessEmail: "",
-  serviceArea: "Available for local family coaching and select online parent consults",
-  domainName: "https://example.com",
-  parentReviews: [
-    { name: "PARENT NAME 1", quote: "PASTE REAL REVIEW 1 HERE. Remove the child name, but keep the parent name." },
-    { name: "PARENT NAME 2", quote: "PASTE REAL REVIEW 2 HERE. Remove the child name, but keep the parent name." },
-    { name: "PARENT NAME 3", quote: "PASTE REAL REVIEW 3 HERE. Remove the child name, but keep the parent name." },
-    { name: "PARENT NAME 4", quote: "PASTE REAL REVIEW 4 HERE. Remove the child name, but keep the parent name." }
-  ]
+  businessEmail: "hello@example.com",
+  serviceArea: "Serving families locally and online",
+  domainName: "https://example.com"
 };
 ```
 
-Also update the canonical URL, Open Graph URL, Open Graph image URL, and JSON-LD values in the `<head>` if you have a production domain. Paste the four real parent reviews into `parentReviews`; remove kids’ names from the quote text, but keep each parent name in the `name` field. Add a real business email when ready; until then, the site hides email links and the email form so no `hello@example.com` trust leak appears.
+Also update the canonical URL, Open Graph URL, Open Graph image URL, and JSON-LD values in the `<head>` if you have a production domain.
 
 ## Run locally
 
