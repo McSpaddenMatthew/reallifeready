@@ -15,7 +15,7 @@ window.siteConfig = {
 };
 ```
 
-Also update the canonical URL, Open Graph URL, Open Graph image URL, and JSON-LD values in the `<head>` if you have a production domain. Replace the four parent review placeholder cards with real testimonials before publishing; do not leave placeholders live on a production site.
+Also update the canonical URL, Open Graph URL, Open Graph image URL, and JSON-LD values in the `<head>` if you have a production domain.
 
 ## Run locally
 
