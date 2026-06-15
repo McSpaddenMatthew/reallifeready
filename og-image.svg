@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Real Life Ready</title>
-  <desc id="desc">The 90-Day Responsibility Build for capable grades 4–8 kids.</desc>
+  <desc id="desc">Executive function coaching for grades 4–8 kids.</desc>
   <rect width="1200" height="630" fill="#f7f3ea"/>
   <circle cx="1040" cy="80" r="220" fill="#f0d7b7" opacity="0.9"/>
   <circle cx="110" cy="560" r="180" fill="#e3f0df"/>
@@ -8,7 +8,7 @@
   <rect x="130" y="122" width="92" height="92" rx="28" fill="#17463f"/>
   <text x="176" y="185" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#fff4dd">R</text>
   <text x="250" y="160" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#17352f">Real Life Ready</text>
-  <text x="130" y="294" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#17352f">Your child is capable.</text>
-  <text x="130" y="374" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#17352f">You are carrying too much.</text>
-  <text x="130" y="452" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#5f6f68">The 90-Day Responsibility Build for capable grades 4–8 kids.</text>
+  <text x="130" y="294" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#17352f">Tired of reminding</text>
+  <text x="130" y="374" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#17352f">your child over and over?</text>
+  <text x="130" y="452" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#5f6f68">Executive function coaching for capable grades 4–8 kids.</text>
 </svg>
