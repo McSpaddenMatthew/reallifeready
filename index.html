@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real Life Ready | Executive Function Coaching for Grades 4–8</title>
+  <meta name="description" content="Executive function coaching for capable upper-elementary and middle-school students who need fewer reminders, stronger systems, and more independence at home and school.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#17463f">
+  <link rel="canonical" href="https://example.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Real Life Ready | Executive Function Coaching for Grades 4–8">
+  <meta property="og:description" content="Executive function coaching for capable kids who need fewer reminders, more responsibility, and less nightly friction. First step: a free parent call.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --panel: #fffaf1;
+      --ink: #17352f;
+      --muted: #5f6f68;
+      --brand: #17463f;
+      --brand-2: #d98b4a;
+      --accent: #f0d7b7;
+      --line: #e5d8c5;
+      --shadow: 0 24px 70px rgba(23, 53, 47, .13);
+      --radius: 28px;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 20% 0%, #fff6df 0, transparent 36rem), var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 10;
+      padding: .75rem 1rem;
+      background: var(--brand);
+      color: white;
+      border-radius: 999px;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(16px);
+      background: rgba(247, 243, 234, .86);
+      border-bottom: 1px solid rgba(229, 216, 197, .8);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 1rem;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      font-size: 1.12rem;
+    }
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--brand);
+      color: #fff4dd;
+      box-shadow: 0 10px 24px rgba(23, 70, 63, .22);
+    }
+    nav ul { list-style: none; display: flex; align-items: center; gap: 1.1rem; margin: 0; padding: 0; }
+    nav a { text-decoration: none; color: var(--muted); font-weight: 700; font-size: .95rem; }
+    nav a:hover, nav a:focus { color: var(--brand); }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .82rem 1.15rem;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background: var(--brand);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 14px 30px rgba(23, 70, 63, .18);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button:hover, .button:focus { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(23, 70, 63, .24); }
+    .button.secondary { background: transparent; color: var(--brand); border-color: rgba(23, 70, 63, .22); box-shadow: none; }
+    .button.secondary:hover, .button.secondary:focus { background: rgba(23, 70, 63, .06); }
+    .hero { padding: 76px 0 52px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(320px, .94fr); gap: 46px; align-items: center; }
+    .eyebrow { color: var(--brand-2); font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: .82rem; }
+    h1, h2, h3 { line-height: 1.08; letter-spacing: -.045em; margin: 0; }
+    h1 { font-size: clamp(2.75rem, 7vw, 5.9rem); margin-top: .55rem; }
+    h2 { font-size: clamp(2rem, 4vw, 3.35rem); }
+    h3 { font-size: 1.35rem; }
+    .lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--muted); margin: 1.3rem 0 0; max-width: 62ch; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; align-items: center; }
+    .note { color: var(--muted); font-size: .96rem; margin-top: 1rem; }
+    .hero-card {
+      background: linear-gradient(145deg, #fffbf3, #f2e2c9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(1.35rem, 4vw, 2.2rem);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before { content: ""; position: absolute; width: 180px; height: 180px; border-radius: 999px; background: rgba(217, 139, 74, .2); top: -70px; right: -50px; }
+    .check-list { display: grid; gap: .9rem; padding: 0; margin: 1.35rem 0 0; list-style: none; position: relative; }
+    .check-list li { display: grid; grid-template-columns: 30px 1fr; gap: .75rem; align-items: start; color: #25473f; }
+    .check-list li::before { content: "✓"; width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; background: #e3f0df; color: var(--brand); font-weight: 900; }
+    section { padding: 64px 0; }
+    .section-head { max-width: 760px; margin-bottom: 1.75rem; }
+    .section-head p { color: var(--muted); font-size: 1.08rem; margin: .9rem 0 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .card, .panel {
+      background: rgba(255, 250, 241, .9);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 1.35rem;
+      box-shadow: 0 10px 30px rgba(23, 53, 47, .06);
+    }
+    .card p, .panel p { color: var(--muted); margin-bottom: 0; }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; counter-reset: steps; }
+    .step { counter-increment: steps; position: relative; padding-top: 4.5rem; }
+    .step::before { content: counter(steps); position: absolute; top: 1.35rem; left: 1.35rem; width: 44px; height: 44px; border-radius: 15px; display: grid; place-items: center; background: var(--brand); color: white; font-weight: 900; }
+    .highlight { background: var(--brand); color: white; border-radius: var(--radius); padding: clamp(1.5rem, 4vw, 2.5rem); display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; box-shadow: var(--shadow); }
+    .highlight p { color: rgba(255,255,255,.78); margin: .8rem 0 0; max-width: 70ch; }
+    .price { font-size: 2rem; font-weight: 900; letter-spacing: -.04em; color: #ffe2b9; }
+    .credit { max-width: 220px; margin: .35rem 0 1rem; color: rgba(255,255,255,.78); font-size: .95rem; }
+    .assessment-list { margin-top: 1rem; }
+    .anchor-alias { position: relative; top: -96px; display: block; visibility: hidden; }
+    .offer-card { border-left: 6px solid var(--brand-2); }
+    .review-card { min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; }
+    .review-placeholder { color: var(--muted); font-style: italic; }
+    .review-attribution { margin-top: 1.25rem; font-weight: 900; color: var(--brand); }
+    .faq { display: grid; gap: .85rem; }
+    details { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 1rem 1.1rem; }
+    summary { cursor: pointer; font-weight: 850; }
+    details p { color: var(--muted); margin-bottom: 0; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 1rem; align-items: start; }
+    form { display: grid; gap: .85rem; }
+    label { font-weight: 800; }
+    input, textarea {
+      width: 100%;
+      margin-top: .35rem;
+      border: 1px solid #d8c8b3;
+      background: white;
+      border-radius: 16px;
+      padding: .85rem 1rem;
+      font: inherit;
+      color: var(--ink);
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    footer { padding: 34px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    :focus-visible { outline: 3px solid var(--brand-2); outline-offset: 3px; }
+    @media (max-width: 880px) {
+      nav ul { display: none; }
+      .hero-grid, .contact-grid, .highlight { grid-template-columns: 1fr; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Real Life Ready",
+      "description": "Executive function coaching for capable grades 4–8 kids who need fewer reminders, stronger systems, and more independence at home and school.",
+      "url": "https://example.com/",
+      "email": "hello@example.com",
+      "areaServed": "Your service area"
+    }
+  </script>
+  <script>
+    window.siteConfig = {
+      bookingLink: "https://calendly.com/your-business/free-parent-call",
+      businessEmail: "hello@example.com",
+      serviceArea: "Serving families locally and online",
+      domainName: "https://example.com"
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const { bookingLink, businessEmail, serviceArea } = window.siteConfig;
+      document.querySelectorAll("[data-booking-link]").forEach((link) => { link.href = bookingLink; });
+      document.querySelectorAll("[data-business-email]").forEach((link) => { link.href = `mailto:${businessEmail}`; link.textContent = businessEmail; });
+      document.querySelectorAll("[data-service-area]").forEach((node) => { node.textContent = serviceArea; });
+      const form = document.querySelector("#contact-form");
+      form?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const subject = encodeURIComponent("Real Life Ready parent call request");
+        const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`);
+        window.location.href = `mailto:${businessEmail}?subject=${subject}&body=${body}`;
+      });
+    });
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Real Life Ready home"><span class="mark">R</span><span>Real Life Ready</span></a>
+      <nav>
+        <ul>
+          <li><a href="#fit">Who it helps</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#offer">What you buy</a></li>
+          <li><a href="#assessment">Assessment</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Free parent call</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Executive function coaching for grades 4–8</p>
+          <h1>Executive Function Coaching for Capable Kids Who Need Fewer Reminders</h1>
+          <p class="lead">Real Life Ready helps upper-elementary and middle-school students build the systems they need to start, organize, manage screens, and follow through with less parent support.</p>
+          <p class="note"><strong>Student coaching + parent support + practical school/home systems inside a 90-day pathway.</strong></p>
+          <p class="note">For families tired of reminding, rescuing, and repeating.</p>
+          <div class="cta-row">
+            <a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Schedule a free parent call</a>
+            <a class="button secondary" href="#assessment">See the assessment</a>
+          </div>
+          <p class="note"><strong>Service area:</strong> <span data-service-area>Serving families locally and online</span>.</p>
+        </div>
+        <aside class="hero-card" aria-label="Program overview">
+          <p class="eyebrow">First step: free parent call</p>
+          <h2>Coaching starts with a practical school-and-home assessment.</h2>
+          <ul class="check-list">
+            <li><span>Start with a free parent call to understand fit.</span></li>
+            <li><span>If appropriate, continue with a $500 Executive Function &amp; Independence Assessment.</span></li>
+            <li><span>Receive a written Independence Plan plus a parent debrief call.</span></li>
+            <li><span>Move into a 90-day coaching plan only when coaching is the right next step.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="fit">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Who it helps</p>
+          <h2>For capable kids who need practical systems and ownership.</h2>
+          <p>This is not tutoring, therapy, or a replacement for teachers or counselors. It is structured executive function coaching for daily follow-through at home and school.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><h3>Starting feels hard</h3><p>Your child understands the work but has trouble beginning without repeated reminders.</p></article>
+          <article class="card"><h3>Organization slips</h3><p>Assignments, backpacks, planners, and materials become a constant source of friction.</p></article>
+          <article class="card"><h3>Screens take over</h3><p>Transitions away from devices are difficult, especially when homework or routines need attention.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coaching">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Coaching</p>
+          <h2>Fewer reminders. More responsibility. Less nightly friction.</h2>
+          <p>Real Life Ready provides structured executive function coaching with practical parent support, routines, organization systems, screen-transition plans, and a follow-through scorecard.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><h3>Student coaching</h3><p>Students practice concrete tools for planning, starting, organizing, prioritizing, and following through.</p></article>
+          <article class="card"><h3>Parent support</h3><p>Parents get language, routines, and boundaries that reduce rescuing and repeating at home.</p></article>
+          <article class="card"><h3>School/home systems</h3><p>The work connects backpacks, planners, digital assignments, screens, routines, and responsibility in real life.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What parents are buying</p>
+          <h2>A 90-day coaching pathway toward more independence.</h2>
+          <p>Families are not buying a one-off review. They are buying a structured executive function coaching pathway that starts with a practical assessment so the coaching plan is specific, useful, and worth the investment.</p>
+        </div>
+        <div class="cards">
+          <article class="card offer-card"><h3>First: fit</h3><p>A free parent call confirms whether Real Life Ready is the right kind of support for your child and family.</p></article>
+          <article class="card offer-card"><h3>Then: assessment</h3><p>The $500 Executive Function &amp; Independence Assessment maps the school/home breakdown points and produces a written Independence Plan.</p></article>
+          <article class="card offer-card"><h3>Core offer: coaching</h3><p>If recommended, the family moves into a 90-day coaching plan with student coaching, parent support, routines, organization systems, screen transitions, and follow-through tracking.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2>How Real Life Ready Coaching Works</h2>
+        </div>
+        <div class="steps">
+          <article class="card step"><h3>Free parent call</h3><p>We talk through what is happening at home and school and decide whether the program is a fit.</p></article>
+          <article class="card step"><h3>Executive Function &amp; Independence Assessment</h3><p>If it is a fit, the next step is a $500 assessment with parent input, student input, a school/home responsibility review, and a written plan.</p></article>
+          <article class="card step"><h3>90-Day Coaching Plan</h3><p>Most families who continue move into a structured 90-day coaching plan focused on routines, organization, screens, planning, and follow-through.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="assessment">
+      <span id="review" class="anchor-alias" aria-hidden="true"></span>
+      <div class="container">
+        <div class="highlight">
+          <div>
+            <p class="eyebrow">Assessment</p>
+            <h2>Executive Function &amp; Independence Assessment</h2>
+            <p>The $500 assessment is the paid intake before coaching begins. It identifies where your child is getting stuck and creates the coaching plan — not a diagnostic label or a vague conversation.</p>
+          </div>
+          <div>
+            <div class="price">$500</div>
+            <p class="credit">Applied toward the 90-day coaching program if your family continues.</p>
+            <a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Start with the free call</a>
+          </div>
+        </div>
+        <div class="cards assessment-list">
+          <article class="card"><h3>What is included</h3><p>30-minute parent intake, 30-minute student conversation, schoolwork/planner/backpack/digital workflow review, and home routine and screen friction review.</p></article>
+          <article class="card"><h3>What you receive</h3><p>Identification of the top 2–3 breakdown points, a written Independence Plan, and a 45-minute parent debrief.</p></article>
+          <article class="card"><h3>What happens next</h3><p>You receive a recommendation for 90-day coaching, parent-only support, or no program if another path would serve your family better.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Parent reviews</p>
+          <h2 id="reviews-heading">Four parent review spots are ready for real testimonials.</h2>
+          <p>To avoid fake testimonials, these cards are intentionally written as placeholders. Replace each card with an actual parent review before publishing.</p>
+        </div>
+        <div class="cards">
+          <article class="card review-card"><div><h3>Parent review 1</h3><p class="review-placeholder">Add a real parent quote about fewer reminders, smoother routines, or improved follow-through.</p></div><p class="review-attribution">— Parent of a grades 4–8 student</p></article>
+          <article class="card review-card"><div><h3>Parent review 2</h3><p class="review-placeholder">Add a real parent quote about organization, planning, homework, or school/home responsibility.</p></div><p class="review-attribution">— Parent of a grades 4–8 student</p></article>
+          <article class="card review-card"><div><h3>Parent review 3</h3><p class="review-placeholder">Add a real parent quote about screen transitions, routines, or reduced nightly friction.</p></div><p class="review-attribution">— Parent of a grades 4–8 student</p></article>
+          <article class="card review-card"><div><h3>Parent review 4</h3><p class="review-placeholder">Add a real parent quote about confidence, independence, or the value of the written plan.</p></div><p class="review-attribution">— Parent of a grades 4–8 student</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Questions parents ask</p>
+          <h2 id="faq-heading">Clear boundaries, practical support.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Is this therapy?</summary><p>No. Real Life Ready provides executive function coaching and practical skill-building. It does not diagnose or treat mental health conditions.</p></details>
+          <details><summary>Is this tutoring?</summary><p>No. The focus is not reteaching academic content. The focus is starting, planning, organizing, managing screens, and following through.</p></details>
+          <details><summary>Do you work with teachers or counselors?</summary><p>The work is designed to complement, not replace, school supports and counseling relationships.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="panel">
+          <p class="eyebrow">Ready to talk?</p>
+          <h2>Start with a free parent call.</h2>
+          <p>Email <a data-business-email href="mailto:hello@example.com">hello@example.com</a> or use the form. The fastest next step is the booking link.</p>
+          <div class="cta-row"><a class="button" data-booking-link href="https://calendly.com/your-business/free-parent-call">Book the free parent call</a></div>
+        </div>
+        <form id="contact-form" class="panel">
+          <label>Name <input name="name" autocomplete="name" required></label>
+          <label>Email <input name="email" type="email" autocomplete="email" required></label>
+          <label>What is happening now? <textarea name="message" required></textarea></label>
+          <button class="button" type="submit">Send email</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Real Life Ready. All rights reserved.</span>
+      <span><a data-business-email href="mailto:hello@example.com">hello@example.com</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
