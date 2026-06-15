@@ -1,6 +1,6 @@
 # Real Life Ready
 
-A fast, accessible, single-page website for Real Life Ready executive function coaching.
+A fast, accessible, single-page website for Real Life Ready executive function coaching, framed around coaching first and a paid assessment as the practical onboarding step.
 
 ## Configure the site
 
