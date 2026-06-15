@@ -149,6 +149,14 @@
       box-shadow: 0 10px 30px rgba(23, 53, 47, .06);
     }
     .card p, .panel p { color: var(--muted); margin-bottom: 0; }
+
+    .transformation-table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--panel); box-shadow: 0 10px 30px rgba(23, 53, 47, .06); }
+    .transformation-table th, .transformation-table td { text-align: left; padding: 1rem 1.15rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .transformation-table th { background: rgba(23, 70, 63, .08); color: var(--brand); font-size: .88rem; text-transform: uppercase; letter-spacing: .08em; }
+    .transformation-table tr:last-child td { border-bottom: 0; }
+    .snapshot-meta { color: var(--brand-2); font-weight: 900; font-size: .88rem; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .55rem; }
+    .snapshot-list { display: grid; gap: .65rem; margin: 1rem 0 0; }
+    .snapshot-list p { margin: 0; }
     .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; counter-reset: steps; }
     .step { counter-increment: steps; position: relative; padding-top: 4.5rem; }
     .step::before { content: counter(steps); position: absolute; top: 1.35rem; left: 1.35rem; width: 44px; height: 44px; border-radius: 15px; display: grid; place-items: center; background: var(--brand); color: white; font-weight: 900; }
@@ -209,6 +217,7 @@
       document.querySelectorAll("[data-business-email]").forEach((link) => { link.href = `mailto:${businessEmail}`; link.textContent = businessEmail; });
       document.querySelectorAll("[data-service-area]").forEach((node) => { node.textContent = serviceArea; });
       const form = document.querySelector("#contact-form");
+      document.querySelector("#year").textContent = new Date().getFullYear();
       form?.addEventListener("submit", (event) => {
         event.preventDefault();
         const data = new FormData(form);
@@ -226,15 +235,12 @@
       <a class="brand" href="#top" aria-label="Real Life Ready home"><span class="mark">R</span><span>Real Life Ready</span></a>
       <nav>
         <ul>
-          <li><a href="#fit">Who it helps</a></li>
-          <li><a href="#method">Why reminders fail</a></li>
-          <li><a href="#cost">Cost of waiting</a></li>
-          <li><a href="#process">How coaching works</a></li>
-          <li><a href="#assessment">Roadmap</a></li>
-          <li><a href="#practice">What kids practice</a></li>
+          <li><a href="#fit">Who It Helps</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#assessment">The Roadmap</a></li>
           <li><a href="#plan">90-Day System</a></li>
-          <li><a href="#reviews">Parent Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Book a Call</a></li>
         </ul>
       </nav>
       <a class="button" data-booking-link href="https://calendly.com/mcspaddenmatthew/parent-fit-call">Book a 20-minute call</a>
@@ -246,8 +252,8 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Executive function coaching for grades 4–8</p>
-          <h1>Help your capable child stop relying on you for every step.</h1>
-          <p class="lead">For grades 4–8 kids who are smart enough to do the work, but still need too much help starting, planning, organizing, turning things in, managing screens, and following through.</p>
+          <h1>Help your capable child become less dependent on you for school, screens, and daily routines.</h1>
+          <p class="lead">For grades 4–8 kids who are smart enough to do the work, but still need too much help starting, planning, organizing, turning things in, getting off screens, and following through.</p>
           <p class="lead"><strong>Real Life Ready helps families build a practical responsibility system so parents can stop being the planner, reminder system, screen police, and emotional backup plan.</strong></p>
           <div class="cta-row">
             <a class="button" data-booking-link href="https://calendly.com/mcspaddenmatthew/parent-fit-call">Book a 20-minute parent fit call</a>
@@ -267,6 +273,29 @@
             <li><span>The first step is a direct 20-minute parent fit call, so you know what happens next before you commit.</span></li>
           </ul>
         </aside>
+      </div>
+    </section>
+
+
+    <section id="transformation">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What changes in 90 days?</p>
+          <h2>The goal is visible responsibility, not more parent management.</h2>
+          <p>Real Life Ready turns the daily friction points into routines your child can name, practice, and explain back to you.</p>
+        </div>
+        <table class="transformation-table" aria-label="Before and after changes families work toward in 90 days">
+          <thead>
+            <tr><th scope="col">Before</th><th scope="col">After</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Parent reminds every step</td><td>Child knows the first step</td></tr>
+            <tr><td>Homework starts with negotiation</td><td>Homework starts with a routine</td></tr>
+            <tr><td>Screens cause daily fights</td><td>Screen transitions have a plan</td></tr>
+            <tr><td>Backpack and materials are chaotic</td><td>Stuff has a reset system</td></tr>
+            <tr><td>Parent carries the plan</td><td>Child explains the plan back</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -456,14 +485,16 @@
     <section id="fit-check">
       <div class="container">
         <div class="section-head"><p class="eyebrow">Fit check</p><h2>Built for families who want practical ownership, not just advice.</h2></div>
-        <div class="cards two-col"><article class="card"><h3>Good fit</h3><ul class="plain-list"><li>Your child is capable but needs too many reminders.</li><li>You are carrying the planning, routines, and follow-through.</li><li>Homework, screens, organization, or transitions create daily friction.</li><li>You want practical systems, not just advice.</li></ul></article><article class="card"><h3>Not a fit</h3><ul class="plain-list"><li>You mainly need subject tutoring.</li><li>Your child needs clinical treatment first.</li><li>You want a coach to force compliance while the home system stays the same.</li><li>You are not willing to practice routines between sessions.</li></ul></article></div>
+        <div class="cards two-col"><article class="card"><h3>Good fit</h3><ul class="plain-list"><li>Your child is capable but needs too many reminders.</li><li>You are carrying the planning, routines, and follow-through.</li><li>Homework, screens, organization, or transitions create daily friction.</li><li>You want practical systems, not just advice.</li><li>You are willing to support the system between sessions while your child practices.</li></ul></article><article class="card"><h3>Not a fit</h3><ul class="plain-list"><li>You mainly need subject tutoring.</li><li>Your child needs clinical treatment first.</li><li>You want a coach to force compliance while the home system stays the same.</li><li>You are not willing to practice routines between sessions.</li></ul></article></div>
+        <p class="note"><strong>Limited fit:</strong> I only take families where the child is capable of practicing routines and the parent is willing to support the system between sessions. If this is mainly a clinical, behavioral, or subject-tutoring problem, I will say that on the call.</p>
       </div>
     </section>
 
     <section id="reviews">
       <div class="container">
-        <div class="section-head"><p class="eyebrow">Parent reviews</p><h2>Parents notice when home starts to feel less heavy.</h2><p>Families come to Real Life Ready because they are tired of carrying every reminder, routine, and school responsibility. The goal is practical progress parents can see at home.</p></div>
-        <div class="cards"><article class="card"><h3>Lucy</h3><p>“Before this, I felt like I had to keep every assignment and routine in my head. Having a simple plan helped my child know what to check first, and it helped me stop jumping in so quickly.”</p></article><article class="card"><h3>Jessica</h3><p>“The biggest change was that my child had actual steps to follow. Instead of waiting for me to say every next thing, there was a routine we could point back to.”</p></article><article class="card"><h3>Catherine</h3><p>“My child has ADHD, and hard tasks used to turn into immediate avoidance. Practicing the first step and the reset plan made hard things feel less like a battle.”</p></article><article class="card"><h3>Kathleen</h3><p>“You understood what was happening quickly. The written plan made it easier to see what we were changing at home and what progress to look for.”</p></article></div>
+        <div class="section-head"><p class="eyebrow">Parent reviews and outcome snapshots</p><h2>Specific systems create progress parents can see.</h2><p>Families come to Real Life Ready because they are tired of carrying every reminder, routine, and school responsibility. The goal is practical progress parents can see at home.</p></div>
+        <div class="cards"><article class="card"><p class="snapshot-meta">5th grade boy — homework start routine</p><h3>From repeated prompting to a first-step routine</h3><div class="snapshot-list"><p><strong>Before:</strong> Homework required repeated parent prompting and usually started with negotiation.</p><p><strong>System used:</strong> Start System: open platform, list assignments, choose the first task.</p><p><strong>Progress:</strong> Parent's role shifted from starting the work to checking the plan.</p></div></article><article class="card"><p class="snapshot-meta">6th grade student — backpack reset</p><h3>From missing materials to a weekly reset</h3><div class="snapshot-list"><p><strong>Before:</strong> Assignments, folders, laptop, and charger became daily stress points.</p><p><strong>System used:</strong> Stuff System with a short reset checklist before the school week.</p><p><strong>Progress:</strong> The student could explain what belonged in the backpack and what needed to be charged.</p></div></article><article class="card"><p class="snapshot-meta">7th grade student — screen transition</p><h3>From daily screen fights to a transition plan</h3><div class="snapshot-list"><p><strong>Before:</strong> Getting off devices regularly turned into arguments before homework and bedtime.</p><p><strong>System used:</strong> Screen System with a named cutoff, warning, and next routine.</p><p><strong>Progress:</strong> The family had a plan to point back to instead of restarting the same fight every night.</p></div></article></div>
+        <div class="cards two-col" style="margin-top: 1rem;"><article class="card"><h3>Lucy</h3><p>“Before this, I felt like I had to keep every assignment and routine in my head. Having a simple plan helped my child know what to check first, and it helped me stop jumping in so quickly.”</p></article><article class="card"><h3>Jessica</h3><p>“The biggest change was that my child had actual steps to follow. Instead of waiting for me to say every next thing, there was a routine we could point back to.”</p></article></div>
         <p class="disclaimer">Reviews reflect individual family experiences. Real Life Ready does not diagnose or treat medical or mental health conditions.</p>
       </div>
     </section>
@@ -514,7 +545,7 @@
 
   <footer>
     <div class="container footer-row">
-      <span>© <span id="year"></span> Real Life Ready. Executive function coaching for grades 4–8. <span data-service-area>Serving families locally and online</span>.</span>
+      <span>© <span id="year">2026</span> Real Life Ready. Executive function coaching for grades 4–8. <span data-service-area>Serving families locally and online</span>.</span>
       <span><a data-business-email href="mailto:mcspaddenmatthew@gmail.com">mcspaddenmatthew@gmail.com</a></span>
     </div>
   </footer>
